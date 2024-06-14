@@ -15,7 +15,7 @@ This script renames and organizes files based on metadata, hash values, and cust
 ## Usage
 
 ```bash
-./rename.sh [-d target_directory] [-a hash_algorithm] [-m mode] [-o operation] [-r recursion] [-t title_option] [-q quiet] [-v version] [-D use_date] [-T use_datetime] [files...]
+./bulk-rename.sh [-d target_directory] [-a hash_algorithm] [-m mode] [-o operation] [-r recursion] [-t title_option] [-q quiet] [-v version] [-D use_date] [-T use_datetime] [files...]
 ```
 
 ### Options
@@ -38,40 +38,40 @@ This script renames and organizes files based on metadata, hash values, and cust
 
 Copy files to the `Copy` directory, using md5 hash and metadata for naming:
 ```bash
-./rename.sh -d Copy -a md5 -m auto -t metadata *
+./bulk-rename.sh -d Copy -a md5 -m auto -t metadata *
 ```
 
 #### Move Files with Verbose Output
 
 Move files to the `MovedFiles` directory with verbose output:
 ```bash
-./rename.sh -d MovedFiles -o move *
+./bulk-rename.sh -d MovedFiles -o move *
 ```
 
 #### Quiet Mode
 
 Suppress output while processing:
 ```bash
-./rename.sh -q 1 *
+./bulk-rename.sh -q 1 *
 ```
 
 #### Recursive Processing
 
 Process directories and their contents recursively:
 ```bash
-./rename.sh -r 1 *
+./bulk-rename.sh -r 1 *
 ```
 
 #### Customizing Filename Components
 
 Exclude version and date from filenames:
 ```bash
-./rename.sh -v 0 -D 0 *
+./bulk-rename.sh -v 0 -D 0 *
 ```
 
 Include full datetime in filenames:
 ```bash
-./rename.sh -T 1 *
+./bulk-rename.sh -T 1 *
 ```
 
 ### Requirements
@@ -83,7 +83,7 @@ Include full datetime in filenames:
 
 Ensure the script is executable:
 ```bash
-chmod +x rename.sh
+chmod +x bulk-rename.sh
 ```
 
 Install required dependencies on a Debian-based system:
