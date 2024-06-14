@@ -1,4 +1,4 @@
-# File Renamer Script
+# Bulk Renamer Script
 
 This script renames and organizes files based on metadata, hash values, and custom naming options. It supports various operations, such as copying or moving files, and can process directories recursively.
 
